@@ -1,0 +1,19 @@
+{{extend 'layout.html'}}
+<div class='row'>
+    <div class="col-md-12 center">
+    {{=form}}</div>
+</div>
+<div class='row'>
+{{if start_is_seller:
+starter = messages.first().seller.first_name
+else:
+starter = messages.first().buyer.first_name
+pass
+}}
+{{for message in messages:}}
+    <div class='col-md-3'></div>
+    <div class='col-md-12 text-center'>{{=(db(db.auth_user.id==message.created_by).select().first()).first_name}}
+        on {{=message.created_on}}
+        said: {{=message.massage}}</div>
+{{pass}}
+</div>

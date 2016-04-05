@@ -1,0 +1,28 @@
+{{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}}
+{{right_sidebar_enabled=False}}
+
+{{extend 'layout.html'}}
+<div class="container-fluid">
+    <div class="center">
+        <div class='col-md-12'
+             style="margin-bottom: 10px">
+            <h1 style="margin-bottom: 5px">Welcome to Hand Made World!</h1>
+        </div>
+        <div class='col-md-12'
+             style="margin-bottom: 20px">
+            <h2 style="margin-bottom: 5px">Discover items you can't find anywhere else</h2>
+        </div>
+
+    {{for item in items:}}
+        <div class="col-md-3">
+            <a href={{=URL('listing', args=item.id)}}>
+                <img src="{{=URL('download', args=item.picture)}}"
+                     style="width: 140px; height: 140px;"
+                     alt="Baby Bib Bandana - Pears and Apples &amp; Amy Butler Green Cat Eye- Set of 2 baby bibs (or choose your own fabric)"
+                     class="img-thumbnail"/>
+            </a>
+            <h5 class="center">$ {{=item.price}}</h5>
+        </div>
+    {{pass}}
+    </div>
+</div>

@@ -1,0 +1,24 @@
+{{extend 'layout.html'}}
+
+<div class=".container-fluid ">
+    <h1 class="text-center">Editing items for {{=shop.shop_name}}
+    </h1>
+
+    <div class="row text-center">
+        <div class="col-md-12"><h2 class="text-center">Please click the picture to edit listing:</h2></div>
+        <br>
+    {{for item in items:}}
+        <div class="col-md-3">
+            <p> {{=item.item_name}}</p>
+            <a href={{=URL('editlisting', args=item.id)}}>
+                <img src="{{=URL('download', args=item.picture)}}"
+                     style="width: 140px; height: 140px;"
+                     alt="Baby Bib Bandana - Pears and Apples &amp; Amy Butler Green Cat Eye- Set of 2 baby bibs (or choose your own fabric)"
+                     class="img-thumbnail"/>
+            </a>
+            <p>$ {{=item.price}}</p>
+        </div>
+    {{pass}}
+        <div class="col-md-1"></div>
+    </div>
+</div>

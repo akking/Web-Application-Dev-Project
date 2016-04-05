@@ -1,0 +1,26 @@
+{{extend 'layout.html'}}
+<div class="row ">
+    <div class="col-md-12"><h2 style="margin-bottom: 1px"
+                               class="text-primary text-center">{{=item.item_name}}
+        by {{=item.shop_name.shop_name}}</h2></div>
+    <div class="col-md-12">
+        <hr>
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+        <img src="{{=URL('download', args=item.picture)}}"
+             class="img-responsive center-block"
+             alt="Responsive image"
+                />
+        <h5 class="center">$ {{=item.price}}</h5>
+        <a class="btn btn-default btn-primary center-block"
+           href={{=URL('buy',args=item.id)}}>Add to Cart</a>
+        <a class="btn btn-default center-block"
+           href={{=URL('ask',args=[item.id])}}>ask seller a question</a>
+    </div>
+    <div class="col-md-5"><p class='lead'>{{=item.item_description}}</p>
+        <a class="btn btn-default center-block"
+           href={{=URL('shop',args=[item.shop_name])}}>Go to seller's store</a>
+    </div>
+    <div class="col-md-1"></div>
+</div>
