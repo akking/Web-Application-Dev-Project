@@ -1,4 +1,7 @@
 # Web Application Development Project
+## Notes about the uploaded files:
+Everything are unpacked from [web2py.app.finalProject.w2p] (https://github.com/akking/Web-Application-Dev-Project/raw/master/web2py.app.finalProject.w2p) for viewing the source code dierectly from GitHub. However, in order to actually *view* the project, you need follow the steps below:
+
 ## Instruction to install this project for viewing:
 1. Download the web2py application from [this](http://www.web2py.com/init/default/download "web2py Download
 ") link.
